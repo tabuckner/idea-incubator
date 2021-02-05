@@ -6,6 +6,7 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { IdeaModule } from './modules/idea/idea.module';
 import { Idea } from './modules/idea/entities/idea.entity';
+import { AuthModule } from './modules/auth/auth.module';
 
 const POSTGRES_HOST = process.env.POSTGRES_HOST || 'localhost';
 const POSTGRES_PORT = +(process.env.POSTGRES_PORT || 5432);
@@ -40,6 +41,7 @@ export const APP_MODULE_APPLICATION_IMPORTS = [
   imports: [
     ...APP_MODULE_CONFIG_IMPORTS,
     ...APP_MODULE_APPLICATION_IMPORTS,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
