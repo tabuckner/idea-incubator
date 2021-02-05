@@ -4,8 +4,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { IdeaModule } from 'apps/api/modules/idea/idea.module';
-import { Idea } from 'apps/api/modules/idea/entities/idea.entity';
+import { IdeaModule } from './modules/idea/idea.module';
+import { Idea } from './modules/idea/entities/idea.entity';
 
 const POSTGRES_HOST = process.env.POSTGRES_HOST || 'localhost';
 const POSTGRES_PORT = +(process.env.POSTGRES_PORT || 5432);
