@@ -1,0 +1,5 @@
+<idea-incubator-idea-list-item *ngFor="let idea of (ideas$ | async)" [idea]="idea"></idea-incubator-idea-list-item>
+
+<button mat-fab color="accent" (click)="onClickAdd()">
+  <mat-icon>add</mat-icon>
+</button>

@@ -1,7 +1,8 @@
 {
   "version": 1,
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/angular",
+    "analytics": false
   },
   "schematics": {
     "@nrwl/workspace": {
@@ -74,7 +75,9 @@
               "apps/idea-incubator/src/favicon.ico",
               "apps/idea-incubator/src/assets"
             ],
-            "styles": ["apps/idea-incubator/src/styles.scss"],
+            "styles": [
+              "apps/idea-incubator/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -133,12 +136,17 @@
               "apps/idea-incubator/tsconfig.spec.json",
               "apps/idea-incubator/tsconfig.editor.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/idea-incubator/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/idea-incubator/**/*"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/idea-incubator"],
+          "outputs": [
+            "coverage/apps/idea-incubator"
+          ],
           "options": {
             "jestConfig": "apps/idea-incubator/jest.config.js",
             "passWithNoTests": true
@@ -167,8 +175,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/idea-incubator-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/idea-incubator-e2e/**/*"]
+            "tsConfig": [
+              "apps/idea-incubator-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/idea-incubator-e2e/**/*"
+            ]
           }
         }
       }
@@ -181,12 +194,16 @@
       "architect": {
         "build": {
           "builder": "@nrwl/node:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/api",
             "main": "apps/api/src/main.ts",
             "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": ["apps/api/src/assets"]
+            "assets": [
+              "apps/api/src/assets"
+            ]
           },
           "configurations": {
             "production": {
@@ -215,12 +232,17 @@
               "apps/api/tsconfig.app.json",
               "apps/api/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/api/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/api/**/*"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/api"],
+          "outputs": [
+            "coverage/apps/api"
+          ],
           "options": {
             "jestConfig": "apps/api/jest.config.js",
             "passWithNoTests": true
@@ -236,8 +258,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["libs/api-interfaces/tsconfig.lib.json"],
-            "exclude": ["**/node_modules/**", "!libs/api-interfaces/**/*"]
+            "tsConfig": [
+              "libs/api-interfaces/tsconfig.lib.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/api-interfaces/**/*"
+            ]
           }
         }
       }

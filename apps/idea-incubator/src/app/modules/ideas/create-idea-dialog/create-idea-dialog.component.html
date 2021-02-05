@@ -1,0 +1,19 @@
+<div class="create-idea-dialog">
+  <div class="create-idea-dialog__heading mat-title">Generate a New Key</div>
+  <div class="create-idea-dialog__form">
+    <form [formGroup]="form" *ngIf="form">
+      <mat-form-field appearance="fill">
+        <mat-label>Title</mat-label>
+        <input matInput [formControlName]="FORM_CONTROL_NAMES.title">
+      </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Body</mat-label>
+      <textarea matInput [formControlName]="FORM_CONTROL_NAMES.body"></textarea>
+      </mat-form-field>
+    </form>
+  </div>
+  <div class="create-idea-dialog__actions">
+    <button class="create-idea-dialog__actions__cancel" mat-button (click)="onClickCancel()">Cancel</button>
+    <button class="create-idea-dialog__actions__submit" mat-raised-button color="primary" (click)="onClickConfirm()"
+      [disabled]="form.invalid">Submit</button>
+  </div>

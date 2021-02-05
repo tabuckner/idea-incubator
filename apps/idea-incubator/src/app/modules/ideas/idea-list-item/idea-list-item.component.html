@@ -1,0 +1,21 @@
+<div class="idea-list-item">
+  <mat-card>
+    <mat-card-title>
+      {{ idea.title }}
+    </mat-card-title>
+    <mat-card-content>
+      {{ idea.body }}
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-icon-button>
+        <mat-icon (click)="onUpVote()">arrow_upward</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon (click)="onDownVote()">arrow_downward</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon (click)="onDelete()">delete</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

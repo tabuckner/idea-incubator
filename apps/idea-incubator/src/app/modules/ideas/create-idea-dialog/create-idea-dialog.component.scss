@@ -1,0 +1,16 @@
+.create-idea-dialog {
+  &__form {
+    .mat-form-field {
+      display: flex;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+
+    &__cancel {
+      margin-right: 8px;
+    }
+  }
+}
