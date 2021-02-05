@@ -11,6 +11,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CreateIdeaDialogComponent } from './create-idea-dialog/create-idea-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+
+export const IDEAS_ROUTES = {
+  ROOT_ROUTE: 'ideas'
+};
+
+const routes: Routes = [
+  { path: '', component: IdeasListComponent, pathMatch: 'full' },
+  { path: '**', redirectTo: '', pathMatch: 'full' }
+];
 
 export const IDEAS_MAT_IMPORTS = [
   MatCardModule,
@@ -33,6 +43,7 @@ export const IDEAS_MAT_IMPORTS = [
     FormsModule,
     ReactiveFormsModule,
     ...IDEAS_MAT_IMPORTS,
+    RouterModule.forChild(routes),
   ]
 })
 export class IdeasModule { }

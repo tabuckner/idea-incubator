@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Idea } from 'apps/api/modules/idea/entities/idea.entity';
+import { Idea } from 'apps/api/src/app/modules/idea/entities/idea.entity';
 import { IdeasService } from '../ideas.service';
 
 @Component({
@@ -17,14 +17,11 @@ export class IdeaListItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public onUpVote() {
+  public onUpVote() {}
 
-  }
-  public onDownVote() {
+  public onDownVote() {}
 
-  }
   public onDelete() {
-    console.warn('hit')
     return this.ideasService.deleteIdea(this.idea.id).subscribe();
   }
 

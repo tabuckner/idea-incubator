@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
-import { CreateIdeaDto } from 'apps/api/modules/idea/dto/create-idea.dto';
+import { CreateIdeaDto } from 'apps/api/src/app/modules/idea/dto/create-idea.dto';
 
 
 export enum CreateIdeaDialogFormControlNames {

@@ -3,9 +3,9 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { concatMap, switchMap, tap } from 'rxjs/operators';
 
-import { CreateIdeaDto } from '../../../../../api/modules/idea/dto/create-idea.dto';
-import { UpdateIdeaDto } from '../../../../../api/modules/idea/dto/update-idea.dto';
-import { Idea } from '../../../../../api/modules/idea/entities/idea.entity';
+import { CreateIdeaDto } from 'apps/api/src/app/modules/idea/dto/create-idea.dto';
+import { UpdateIdeaDto } from 'apps/api/src/app/modules/idea/dto/update-idea.dto';
+import { Idea } from 'apps/api/src/app/modules/idea/entities/idea.entity';
 
 @Injectable({
   providedIn: 'root'

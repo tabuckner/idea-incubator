@@ -44,6 +44,8 @@ export const APP_MODULE_APPLICATION_IMPORTS = [
     AuthModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [
+    AppService,
+  ],
 })
 export class AppModule { }

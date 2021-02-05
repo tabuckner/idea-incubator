@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "idea-incubator-4e136": {
+      "hosting": {
+        "idea-incubator": [
+          "idea-incubator-4e136"
+        ]
+      }
+    }
+  }
+}

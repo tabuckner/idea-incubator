@@ -1,4 +1,12 @@
-<idea-incubator-idea-list-item *ngFor="let idea of (ideas$ | async)" [idea]="idea"></idea-incubator-idea-list-item>
+<ng-container *ngIf="ideas$ | async as ideas">
+  <ng-container *ngIf="ideas.length > 0; else noIdeas">
+    <idea-incubator-idea-list-item *ngFor="let idea of ideas" [idea]="idea"></idea-incubator-idea-list-item>
+  </ng-container>
+</ng-container>
+
+<ng-template #noIdeas>
+  Looks like there aren't any ideas yet! Try adding some!
+</ng-template>
 
 <button mat-fab color="accent" (click)="onClickAdd()">
   <mat-icon>add</mat-icon>

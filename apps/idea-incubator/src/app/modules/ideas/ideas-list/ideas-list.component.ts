@@ -1,8 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { CreateIdeaDto } from 'apps/api/modules/idea/dto/create-idea.dto';
-import { Idea } from 'apps/api/modules/idea/entities/idea.entity';
-import { Observable } from 'rxjs';
+import { CreateIdeaDto } from 'apps/api/src/app/modules/idea/dto/create-idea.dto';
 import { filter, switchMap } from 'rxjs/operators';
 import { CreateIdeaDialogComponent } from '../create-idea-dialog/create-idea-dialog.component';
 import { IdeasService } from '../ideas.service';

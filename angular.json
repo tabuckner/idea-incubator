@@ -73,7 +73,12 @@
             "aot": true,
             "assets": [
               "apps/idea-incubator/src/favicon.ico",
-              "apps/idea-incubator/src/assets"
+              "apps/idea-incubator/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/ngx-auth-firebaseui/assets/",
+                "output": "./assets/"
+              }
             ],
             "styles": [
               "apps/idea-incubator/src/styles.scss"
@@ -151,6 +156,10 @@
             "jestConfig": "apps/idea-incubator/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     },
